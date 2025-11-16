@@ -3,26 +3,53 @@
 @tailwind utilities;
 
 :root {
-  --primary: #6366F1;
-  --secondary: #8B5CF6;
-  --success: #10B981;
-  --warning: #F59E0B;
-  --error: #EF4444;
+  /* Primary palette */
+  --primary-purple: #6A2CB0;
+  --primary-pink: #E24B95;
+  --primary-dark: #341A52;
+  --secondary-gold: #F3B52F;
+  --secondary-teal: #26A69A;
+
+  /* Neutral colors */
+  --neutral-white: #FFFFFF;
+  --neutral-light: #F5F0FF;
+  --neutral-mid: #D8CEE8;
+  --neutral-dark: #49455A;
+  --neutral-black: #1A1625;
+
+  /* Alert colors */
+  --alert-red: #E53935;
+  --alert-amber: #FFB300;
+  --alert-green: #43A047;
 }
 
 html {
   scroll-behavior: smooth;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 body {
   @apply antialiased;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Custom utilities */
 .gradient-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(90deg, #6A2CB0, #E24B95);
 }
 
 .gradient-purple {
-  background: linear-gradient(to right, #8B5CF6, #6366F1);
+  background: linear-gradient(90deg, #6A2CB0, #E24B95);
+}
+
+.gradient-gold {
+  background: linear-gradient(90deg, #F3B52F, #6A2CB0);
+}
+
+.gradient-teal {
+  background: linear-gradient(90deg, #26A69A, #6A2CB0);
 }
