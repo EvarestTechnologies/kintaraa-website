@@ -177,3 +177,70 @@ h1, h2, h3, h4, h5, h6 {
 .pulse-slow {
   animation: pulse 3s ease-in-out infinite;
 }
+
+/* Parallax effects */
+.parallax-slow {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Decorative patterns */
+.pattern-dots {
+  background-image: radial-gradient(circle, rgba(106, 44, 176, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.pattern-grid {
+  background-image:
+    linear-gradient(rgba(106, 44, 176, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(106, 44, 176, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Abstract shapes */
+.circle-pattern {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+/* Gradient orbs */
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+  }
+}
+
+.orbit {
+  animation: orbit 20s linear infinite;
+}
+
+/* Floating shapes */
+@keyframes float-rotate {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+  }
+}
+
+.float-rotate {
+  animation: float-rotate 15s ease-in-out infinite;
+}
+
+/* Wave animation */
+@keyframes wave {
+  0% {
+    d: path("M0,50 Q250,0 500,50 T1000,50 V100 H0 Z");
+  }
+  50% {
+    d: path("M0,50 Q250,100 500,50 T1000,50 V100 H0 Z");
+  }
+  100% {
+    d: path("M0,50 Q250,0 500,50 T1000,50 V100 H0 Z");
+  }
+}

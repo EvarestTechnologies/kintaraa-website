@@ -137,17 +137,42 @@ export default function HomePage() {
         </section>
 
         {/* Problem Statement */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-heading font-bold text-primary-dark mb-6">
+        <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+          {/* Decorative background elements */}
+          <div className="absolute inset-0 pattern-dots opacity-30"></div>
+          <div className="absolute top-20 right-0 w-96 h-96">
+            <svg viewBox="0 0 200 200" className="float-rotate opacity-20">
+              <circle cx="100" cy="100" r="80" fill="url(#grad1)" />
+              <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: '#6A2CB0', stopOpacity: 0.3 }} />
+                  <stop offset="100%" style={{ stopColor: '#E24B95', stopOpacity: 0.3 }} />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div className="absolute bottom-20 left-0 w-80 h-80">
+            <svg viewBox="0 0 200 200" className="float opacity-20">
+              <polygon points="100,10 40,198 190,78 10,78 160,198" fill="url(#grad2)" />
+              <defs>
+                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: '#F3B52F', stopOpacity: 0.3 }} />
+                  <stop offset="100%" style={{ stopColor: '#6A2CB0', stopOpacity: 0.3 }} />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <div className="relative max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl sm:text-5xl font-heading font-bold text-primary-dark mb-8">
               Breaking Down Barriers to Support
             </h2>
-            <p className="text-lg text-neutral-dark font-body mb-4">
+            <p className="text-xl text-neutral-dark font-body mb-6 leading-relaxed">
               GBV survivors often face fragmented care, requiring them to navigate multiple service providers
               independently. This leads to gaps in support, repeated trauma, and difficulty accessing
               comprehensive help when they need it most.
             </p>
-            <p className="text-lg text-neutral-dark font-body">
+            <p className="text-xl text-neutral-dark font-body leading-relaxed">
               Kintaraa changes this by connecting survivors with a coordinated network of specialized providers
               who work together to deliver comprehensive, trauma-informed care.
             </p>
@@ -155,8 +180,28 @@ export default function HomePage() {
         </section>
 
         {/* Key Features */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white relative">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-neutral-light/50 to-white relative overflow-hidden">
+          {/* Background pattern */}
+          <div className="absolute inset-0 pattern-grid opacity-20"></div>
+
+          {/* Decorative circles */}
+          <div className="absolute top-10 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 bg-secondary/5 rounded-full blur-3xl"></div>
+
+          {/* Abstract illustrations */}
+          <div className="absolute top-1/4 right-10 w-48 h-48 opacity-10">
+            <svg viewBox="0 0 200 200" className="orbit">
+              <path d="M100,20 Q150,50 150,100 T100,180 T50,100 T100,20" fill="none" stroke="url(#grad3)" strokeWidth="3" />
+              <defs>
+                <linearGradient id="grad3">
+                  <stop offset="0%" style={{ stopColor: '#26A69A' }} />
+                  <stop offset="100%" style={{ stopColor: '#6A2CB0' }} />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl sm:text-5xl font-heading font-bold text-primary-dark mb-6">
                 Everything You Need for Your Recovery Journey
@@ -190,8 +235,35 @@ export default function HomePage() {
 
         {/* Provider Types */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-neutral-light to-white relative overflow-hidden">
-          {/* Decorative blob */}
+          {/* Decorative background elements */}
+          <div className="absolute inset-0 pattern-dots opacity-20"></div>
           <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-secondary/10 blob opacity-50 blur-3xl"></div>
+          <div className="absolute top-10 left-0 w-72 h-72 bg-primary-pink/10 blob-2 opacity-40 blur-3xl"></div>
+
+          {/* Abstract SVG shapes */}
+          <div className="absolute top-40 left-10 w-56 h-56 opacity-10">
+            <svg viewBox="0 0 200 200" className="float">
+              <rect x="20" y="20" width="160" height="160" rx="30" fill="url(#grad4)" />
+              <defs>
+                <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: '#26A69A', stopOpacity: 0.4 }} />
+                  <stop offset="100%" style={{ stopColor: '#F3B52F', stopOpacity: 0.4 }} />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <div className="absolute bottom-20 right-20 w-64 h-64 opacity-10">
+            <svg viewBox="0 0 200 200" className="float-rotate">
+              <path d="M100,0 L131,69 L200,80 L150,130 L162,200 L100,165 L38,200 L50,130 L0,80 L69,69 Z" fill="url(#grad5)" />
+              <defs>
+                <linearGradient id="grad5">
+                  <stop offset="0%" style={{ stopColor: '#E24B95', stopOpacity: 0.3 }} />
+                  <stop offset="100%" style={{ stopColor: '#6A2CB0', stopOpacity: 0.3 }} />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
 
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -222,8 +294,30 @@ export default function HomePage() {
         </section>
 
         {/* For Survivors / For Providers */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary-dark text-white">
-          <div className="max-w-7xl mx-auto">
+        <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-primary-dark text-white overflow-hidden">
+          {/* Decorative background elements */}
+          <div className="absolute inset-0 pattern-grid opacity-10"></div>
+          <div className="absolute top-0 left-0 w-96 h-96 bg-primary-pink/20 blob opacity-30 blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-secondary-teal/20 blob-2 opacity-30 blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-3xl opacity-20"></div>
+
+          {/* Abstract SVG illustrations */}
+          <div className="absolute top-20 right-10 w-40 h-40 opacity-5">
+            <svg viewBox="0 0 200 200" className="pulse-slow">
+              <circle cx="50" cy="50" r="40" fill="#E24B95" />
+              <circle cx="150" cy="50" r="40" fill="#26A69A" />
+              <circle cx="100" cy="130" r="40" fill="#F3B52F" />
+            </svg>
+          </div>
+
+          <div className="absolute bottom-10 left-10 w-48 h-48 opacity-5">
+            <svg viewBox="0 0 200 200" className="float">
+              <ellipse cx="100" cy="100" rx="80" ry="40" fill="#6A2CB0" transform="rotate(45 100 100)" />
+              <ellipse cx="100" cy="100" rx="80" ry="40" fill="#E24B95" transform="rotate(-45 100 100)" />
+            </svg>
+          </div>
+
+          <div className="relative max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* For Survivors */}
               <div>
@@ -338,9 +432,33 @@ export default function HomePage() {
 
         {/* Final CTA */}
         <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-gradient-purple overflow-hidden">
-          {/* Decorative elements */}
+          {/* Decorative background elements */}
+          <div className="absolute inset-0 pattern-dots opacity-20"></div>
           <div className="absolute top-10 left-10 w-80 h-80 bg-white/10 blob opacity-60 blur-2xl"></div>
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-secondary/20 blob-2 opacity-60 blur-2xl"></div>
+          <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-secondary-teal/20 rounded-full blur-3xl opacity-40"></div>
+          <div className="absolute bottom-1/4 right-1/3 w-72 h-72 bg-white/5 blob opacity-50 blur-2xl"></div>
+
+          {/* Abstract SVG decorations */}
+          <div className="absolute top-10 right-1/4 w-32 h-32 opacity-10">
+            <svg viewBox="0 0 200 200" className="float-rotate">
+              <polygon points="100,20 180,180 20,180" fill="white" />
+            </svg>
+          </div>
+
+          <div className="absolute bottom-20 left-1/4 w-40 h-40 opacity-10">
+            <svg viewBox="0 0 200 200" className="orbit">
+              <circle cx="100" cy="50" r="30" fill="#F3B52F" />
+              <circle cx="70" cy="120" r="25" fill="#26A69A" />
+              <circle cx="130" cy="130" r="20" fill="white" />
+            </svg>
+          </div>
+
+          <div className="absolute top-1/2 right-10 w-36 h-36 opacity-5">
+            <svg viewBox="0 0 200 200" className="pulse-slow">
+              <path d="M100,10 L130,90 L190,90 L140,130 L160,200 L100,150 L40,200 L60,130 L10,90 L70,90 Z" fill="white" />
+            </svg>
+          </div>
 
           <div className="relative max-w-5xl mx-auto text-center text-white">
             <div className="glass-dark p-12 rounded-[3rem] backdrop-blur-xl">
